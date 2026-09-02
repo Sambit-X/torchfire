@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dvo7y0loqwm42"]
+
+[ext_resource type="Script" uid="uid://c50pwqcnienmd" path="res://scripts/manager.gd" id="1_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://orgoje3dsu2v" path="res://scenes/player.tscn" id="2_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://8r32xfp0bc61" path="res://scenes/wall.tscn" id="3_tefeu"]
+[ext_resource type="PackedScene" uid="uid://bsfr2ltd0f62h" path="res://scenes/torch.tscn" id="4_o6xl0"]
+
+[node name="Main" type="Node2D" unique_id=1484127551]
+script = ExtResource("1_jyhfs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1913957231]
+position = Vector2(288, 162)
+zoom = Vector2(2, 2)
+
+[node name="Player" parent="." unique_id=566176 instance=ExtResource("2_tbgi4")]
+position = Vector2(61, 63)
+
+[node name="Walls" type="Node" parent="." unique_id=1332663590]
+
+[node name="Wall" parent="Walls" unique_id=1452951093 instance=ExtResource("3_tefeu")]
+position = Vector2(-8, 165)
+rotation = -3.1415927
+scale = Vector2(0.015, -0.5)
+
+[node name="Wall3" parent="Walls" unique_id=231002026 instance=ExtResource("3_tefeu")]
+position = Vector2(288.00003, -8)
+rotation = 1.5707963
+scale = Vector2(0.015, -0.91)
+
+[node name="Wall4" parent="Walls" unique_id=2124215253 instance=ExtResource("3_tefeu")]
+position = Vector2(288.00003, 331.99997)
+rotation = 1.5707963
+scale = Vector2(0.015, -0.91)
+
+[node name="Wall2" parent="Walls" unique_id=647916680 instance=ExtResource("3_tefeu")]
+position = Vector2(584, 163)
+rotation = -3.1415927
+scale = Vector2(0.015, -0.5)
+
+[node name="Torches" type="Node" parent="." unique_id=363856347]
+
+[node name="Torch" parent="Torches" unique_id=1315773875 instance=ExtResource("4_o6xl0")]
+position = Vector2(526, 282)
+
+[node name="Torch2" parent="Torches" unique_id=444402716 instance=ExtResource("4_o6xl0")]
+position = Vector2(491, 51)
+
+[node name="Torch3" parent="Torches" unique_id=2137437537 instance=ExtResource("4_o6xl0")]
+position = Vector2(165, 190)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=239762420]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 156.0
+offset_bottom = 31.0
+placeholder_text = "Light the torch"
